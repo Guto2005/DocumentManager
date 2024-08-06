@@ -1,0 +1,208 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+header {
+    background: #333;
+    color: #fff;
+    padding: 30px 0;
+    border-bottom: #ccc 1px solid;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Grid de layout */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.column {
+    flex: 1;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+/* Estilo do formulário */
+form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease-in;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.enviar  {
+    font-size: 25px;
+    padding: 20px;
+    color: white;
+    background-color: green;
+    border-radius: 20px;
+}
+
+.registrar {
+    font-size: 25px;
+    padding: 20px;
+    color: white;
+    background-color: green;
+    border-radius: 20px;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 32px;
+    font-size: 20px;
+}
+
+.login {
+    font-size: 25px;
+    padding: 20px;
+    color: white;
+    background-color: green;
+    border-radius: 20px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="file"],
+form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+form button:hover {
+    background: #218838;
+    animation: pulse 1s infinite;
+}
+
+/* Estilo das listas de documentos */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 20px;
+    color: #354dd3;
+    font-size: 1.6em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Estilo para mensagens */
+.message {
+    background: #e9ecef;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.error {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.success {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+/* Animação de carregamento */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #28a745;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
